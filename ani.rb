@@ -39,9 +39,13 @@ id = 0
 search_db = []
 ani_db = []
 
+### Welcome Message ###
+puts "\n===== Welcome to Ani_Ruby ====="
+puts "Please begin your search for a desired type of anime!"
+
 ### User input section ###
 # Get user command for amount of entries to scrape
-print "How many entries would you like to scrape?\n>> "
+print "\nHow many entries would you like to scrape?\n>> "
 entry_num = gets.chomp
 # Get user command for anime ID to begin at
 print "Which anime ID would you like to begin at?\n>> "
@@ -51,7 +55,7 @@ print "What term do you want to search for?\n>> "
 search_term = gets.chomp.to_s
 
 # Loading message
-print "Loading now, please wait...\n------------\n"
+print "\nLoading now, please wait...\n------------\n"
 
 # Web scraper and storage
 (entry_num).to_i.times do
@@ -85,4 +89,4 @@ end
 # Print out report
 puts "\nTotal list queried: \n------------"
 ani_db.each { |title| puts title}
-puts "------------\nNumber of #{search_term} anime's found: " + search_db.length.to_s + " out of " + ani_db.length.to_s
+puts "------------\nNumber of \"#{search_term}\" anime's found: " + search_db.length.to_s + " out of " + ani_db.length.to_s
