@@ -1,7 +1,6 @@
 require 'nokogiri'
 require 'open-uri'
 
-
 # Method to output queried anime to screen
 def to_screen(id, title, desc)
 	# Formatting output  #
@@ -33,7 +32,6 @@ def search_query(id, title, desc, search_db, search_term)
 		to_screen(id, title, desc)
 	end
 end
-
 
 
 # Starting values
