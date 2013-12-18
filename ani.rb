@@ -32,21 +32,23 @@ def robot_query(id, title, desc, robot_db)
 	end
 end
 
+
 # Starting values
 id = 0
 robot_db = []
 ani_db = []
 
+### User input section ###
 # Get user command for amount of entries to scrape
 print "How many entries would you like to scrape?\n>> "
 entry_num = gets.chomp
-
 # Get user command for anime ID to begin at
 print "Which anime ID would you like to begin at?\n>> "
 id = gets.chomp.to_i
 
-
+# Loading message
 print "Loading now, please wait...\n------------\n"
+
 # Web scraper and storage
 (entry_num).to_i.times do
 	begin
