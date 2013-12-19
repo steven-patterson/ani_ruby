@@ -9,14 +9,18 @@ def to_screen(id, title, desc)
 	#ID Title
 	id_title = "ID:#{id} >> "
 	print "\n#{id_title}"
+
 	# Series Title
 	print "[#{title}]\n"
+
 	# Bottom border formatting
 	title_len = title.length + id_title.length + 4
 	title_len.times { print "=" }
+
 	# Description
 	puts "\n#{desc}\n"
 end
+
 
 # Method to store matches
 def search_query(id, title, desc, search_db, search_term)
@@ -43,13 +47,16 @@ ani_db = []
 puts "\n===== Welcome to Ani_Ruby ====="
 puts "Please begin your search for a desired type of anime!"
 puts "==============================="
+
 ### User input section ###
 # Get user command for amount of entries to scrape
 print "\nHow many entries would you like to scrape?\n>> "
 entry_num = gets.chomp
+
 # Get user command for anime ID to begin at
 print "Which anime ID would you like to begin at?\n>> "
 id = gets.chomp.to_i
+
 # Get user search term
 print "What term do you want to search for?\n>> "
 search_term = gets.chomp.to_s
