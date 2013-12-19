@@ -1,5 +1,7 @@
 require 'nokogiri'
 require 'open-uri'
+require 'rubygems'
+require 'bundler/setup'
 
 # Method to output queried anime to screen
 def to_screen(id, title, desc)
